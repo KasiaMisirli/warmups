@@ -1,0 +1,35 @@
+
+<h1>Question 1</h1>
+<h2>“If I ask that guard which is the correct door what will he say?”<h2>
+<p>If it is the liar, he will lie. If it is the truth teller, he will be saying about the other 
+person, which is liar.</p>
+<p>So if you ask this question to any one of them you will get a wrong answer.</p>
+
+<h3>But there are only two doors, and one of them is wrong.
+So after asking that question, go to the door which he is NOT saying about.</h3>
+
+
+<h1>Question 2</h1>
+<p>The answer is, on the painting is the son of the speaker</p>
+
+<h1>Question 3</h1>
+<p> Answer is Thursday, Tuesday, today and tomorrow</p>
+
+<h1>Question 4</h1>
+<p>Take the chicken across.
+Come back with the boat empty besides yourself.
+Take the grain (or the fox) across.
+Take the chicken back.
+Take the fox (or the grain) across.
+Come back with the boat empty besides yourself.
+Take the chicken across</p>
+
+<h1>Question 5</h1>
+<p>zero!</p>
+
+<h1>Question 6</h1>
+<p>AL gave Paige 10 apples because "one apple a day 
+keeps the doctor away" and he would like to keep the doctor away ffrom Paige:)</p>
+
+<h1>Question 7</h1>
+<p>She killed her sister, hoping the man would attend the funeral.</p>
