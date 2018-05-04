@@ -1,0 +1,435 @@
+Started GET "/login" for 127.0.0.1 at 2018-05-03 09:23:33 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-05-03 09:23:36 +1000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/KasiaMisirli/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/KasiaMisirli/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (3.3ms)
+Completed 200 OK in 13ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20180502232820)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180502232820_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180502232820"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-05-02 23:28:32.250806"], ["updated_at", "2018-05-02 23:28:32.250806"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreatePokems (20180502233007)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180502233007_create_pokems.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "pokems" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "description" text, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180502233007_create_pokems.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180502233007"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2018-05-03 09:31:43 +1000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/KasiaMisirli/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 273ms (Views: 271.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-03 09:32:42 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 24ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-03 09:38:38 +1000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pokems/new" for 127.0.0.1 at 2018-05-03 09:38:44 +1000
+Processing by PokemsController#new as HTML
+  Rendering pokems/new.html.erb within layouts/application
+  Rendered pokems/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 25ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pokems/new" for 127.0.0.1 at 2018-05-03 09:39:28 +1000
+Processing by PokemsController#new as HTML
+  Rendering pokems/new.html.erb within layouts/application
+  Rendered pokems/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pokems/new?name=TEST+name&description=TEST+descrip" for 127.0.0.1 at 2018-05-03 09:39:40 +1000
+Processing by PokemsController#new as HTML
+  Parameters: {"name"=>"TEST name", "description"=>"TEST descrip"}
+  Rendering pokems/new.html.erb within layouts/application
+  Rendered pokems/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pokems/new?name=TEST+name&description=TEST+descrip" for 127.0.0.1 at 2018-05-03 09:46:07 +1000
+Processing by PokemsController#new as HTML
+  Parameters: {"name"=>"TEST name", "description"=>"TEST descrip"}
+  Rendering pokems/new.html.erb within layouts/application
+  Rendered pokems/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-03 09:46:13 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2018-05-03 09:46:15 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"PqCsFTAenyBfCzOdLsxeaq5F0hGDH44DiwOXvCcxvdMvd5UwCBt5kCQG6eCV41/eKDYTzbBMOGo6s3GrMUUrcw==", "email"=>"kasia.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kasia.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 33ms (Views: 20.6ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2018-05-03 09:46:56 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"X7ovFK4ljRS9q1OnnWx7F7dyZI75RtXHOXfSHzEkmAtObRYxliBrpMamidomQ3qjMQGlUsoVY66IxzQIJ1AOqw==", "email"=>"kasia.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kasia.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2018-05-03 09:47:24 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"apQLB22Lj+Ltvxtk6r/ketrdcnU8MOIwx3+8im2nbh17QzIiVY5pUpaywRlRkOXOXK6zqQ9jVFl2z1qde9P4vQ==", "email"=>"lola.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "lola.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-03 09:48:32 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session" for 127.0.0.1 at 2018-05-03 09:48:39 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/session"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/session" for 127.0.0.1 at 2018-05-03 09:49:42 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/session"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2018-05-03 09:49:45 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2018-05-03 09:49:49 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"3llLuWwdIUTbRI6ufMEX971n6f4k6qurexo5gMFMH5HPjnKcVBjH9KBJVNPH7hZDOxQoIhe5HcLKqt+X1ziJMQ==", "email"=>"kasia.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kasia.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 41ms (Views: 26.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-03 09:49:53 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pokems/new" for 127.0.0.1 at 2018-05-03 09:49:53 +1000
+Processing by PokemsController#new as HTML
+  Rendering pokems/new.html.erb within layouts/application
+  Rendered pokems/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 24ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pokems/new?name=eee&description=eee" for 127.0.0.1 at 2018-05-03 09:49:58 +1000
+Processing by PokemsController#new as HTML
+  Parameters: {"name"=>"eee", "description"=>"eee"}
+  Rendering pokems/new.html.erb within layouts/application
+  Rendered pokems/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pokems/new?name=eee&description=eee" for 127.0.0.1 at 2018-05-03 09:52:47 +1000
+Processing by PokemsController#new as HTML
+  Parameters: {"name"=>"eee", "description"=>"eee"}
+  Rendering pokems/new.html.erb within layouts/application
+  Rendered pokems/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pokems/new?name=dd&description=dd" for 127.0.0.1 at 2018-05-03 09:52:57 +1000
+Processing by PokemsController#new as HTML
+  Parameters: {"name"=>"dd", "description"=>"dd"}
+  Rendering pokems/new.html.erb within layouts/application
+  Rendered pokems/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pokems/new?name=dd&description=dd" for 127.0.0.1 at 2018-05-03 09:56:03 +1000
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/KasiaMisirli/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by PokemsController#new as HTML
+  Parameters: {"name"=>"dd", "description"=>"dd"}
+  Rendering pokems/new.html.erb within layouts/application
+  Rendered pokems/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 178ms (Views: 170.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-05-03 09:56:10 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2018-05-03 09:56:12 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"MlPCFpAoj1DO8txzhX57QUT42y9Ih65lCMBebFycSB0jhPszqC1p4LX/Bg4+UXr1wosa83vUGAy5cLh7SujevQ==", "email"=>"kasia.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kasia.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 29ms (Views: 18.1ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2018-05-03 09:57:11 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"VwpP+5U2GbbzbYUZWaII1KlEKL5WILALRVbSvCWVXyVG3XberTP/BohgX2TijQlgLzfpYmVzBmL05jSrM+HJhQ==", "email"=>"kasia.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kasia.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/session" for 127.0.0.1 at 2018-05-03 09:59:00 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/session"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2018-05-03 09:59:08 +1000
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 32ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2018-05-03 09:59:10 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"6u+BG6om/qTWF6FCEgTLY8F1/ltHyQ5eo9XvmzeBUvj7OLg+kiMYFK0aez+pK8rXRwY/h3SauDcSZQmMIfXEWA==", "email"=>"kasia.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kasia.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 40ms (Views: 25.2ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2018-05-03 09:59:13 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"b6jonykPM8HN3QPr95efwRamd6yczL9vldYZNcsG0tR+f9G6EQrVcbbQ2ZZMuJ51kNW2cK+fCQYkZv8i3XJEdA==", "email"=>"kasia.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kasia.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2018-05-03 09:59:13 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"JT89uN7xipG2i6ZZbxYlIYAT0/qRs8Qrxg1vQD8e5TA06ASd5vRsIc2GfCTUOSSVBmASJqLgckJ3vYlXKWpzkA==", "email"=>"kasia.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kasia.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 26ms (Views: 12.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2018-05-03 09:59:13 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"H0x2MtXYH1CkwXhT5R8eDBi8i8EE3bPBRniQCu9H9H0Om08X7d354N/Moi5eMB+4ns9KHTeOBaj3yHYd+TNi3Q==", "email"=>"kasia.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kasia.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2018-05-03 09:59:14 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"ZdjtEy0iFYG1Ap/Xwgh+WM+m+LbWxvcM1yM53dpjHGR0D9Q2FSfzMc4PRap5J3/sSdU5auWVQWVmk9/KzBeKxA==", "email"=>"kasia.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kasia.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2018-05-03 09:59:14 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"authenticity_token"=>"ySROdecDVUSpiXY6frNF/iYswgeq4puB9iX4w1fJfJbY83dQ3waz9NKErEfFnERKoF8D25mxLehHlR7UQb3qNg==", "email"=>"kasia.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kasia.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.1ms)
+
+

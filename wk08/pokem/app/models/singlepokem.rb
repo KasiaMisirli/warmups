@@ -1,0 +1,2 @@
+class Singlepokem < ApplicationRecord
+end

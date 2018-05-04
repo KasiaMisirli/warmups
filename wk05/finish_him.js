@@ -35,7 +35,7 @@ console.log(spiner2("The Andy_Griffith_Show"));
 def spiner str
     str.downcase.gsub(/[\W\\_]/, '-')
 end
-spiner("The Andy_Griffith_Show")
+spiner "The Andy_Griffith_Show"
 
 // ------------------------
 //ruby below

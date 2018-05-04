@@ -1,0 +1,37 @@
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+
+<script>
+var x = document.getElementById("demo");
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude; 
+}
+var myLatitude = -37.8187042;
+var myLongitude = 144.95931679999998;
+
+var myResults = [ {name: "six pack of beer", location: {lat: 37.767182, long: -122.5}},
+          {name: "whacky glasses", location: {lat: 37.767182, long: -122.51}},
+          {name: "whiskey bottle", location: {lat: 37.767282, long: -122.49}},
+          {name: "diving goggles", location: {lat: 37.770282, long: -122.503}},
+          {name: "running shoes", location: {lat: 37.7669, long: -122.457}},
+          {name: "paint brushes", location: {lat: 37.76800, long: -122.4580}}]
+
+
+double dLat = Math.toRadians(lat2-lat1);
+double dLng = Math.toRadians(lng2-lng1);
+
+var distanceLat = Math.toRadians(myLatitude-myResults[0][lat]);
+
+</script>

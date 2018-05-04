@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pokemon</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <a href="/">Home</a>
+  <a href="/pokems/new">catch a pokemon!</a>
+  <a href="/login">login</a>
+  <h1>User ID: <%= session[:user_id]%></h1>
+    <%= yield %>
+  </body>
+</html>
